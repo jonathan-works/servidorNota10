@@ -1,1 +1,17 @@
-// app global css in SCSS form
+@import 'quasar/src/css/variables';
+
+.titulo-com-barra {
+  position: relative;
+  padding-left: 0.5em; /* espaço para a barra */
+}
+
+.titulo-com-barra::before {
+  content: "";
+  height: 100%;
+  border-right: 4px solid $primary;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: $primary;
+  font-weight: bold;
+}

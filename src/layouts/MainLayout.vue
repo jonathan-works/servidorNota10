@@ -1,21 +1,21 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="hHh Lpr fFf" class="hide-scrollbar-force">
     <q-header elevated>
       <q-toolbar>
-        <q-btn
+        <!-- <q-btn
           flat
           dense
           round
           icon="menu"
           aria-label="Menu"
           @click="toggleLeftDrawer"
-        />
+        /> -->
 
         <q-toolbar-title>
-          Quasar App
+          
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <!-- <div>Quasar v{{ $q.version }}</div> -->
       </q-toolbar>
     </q-header>
 
@@ -42,10 +42,34 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+      <q-footer bordered class="bg-grey-3 text-primary">
+        <q-tabs 
+          active-color="primary" 
+          indicator-color="transparent" 
+          class="text-grey-8" 
+          v-model="tab" 
+          align="justify">
+          <q-tab name="home">
+            <q-item-section class="flex items-center">
+              <q-icon :name="ionHome" size="1.3rem"/>
+              <span class="text-caption text-capitalize">home</span>
+            </q-item-section>
+          </q-tab>
+          <q-tab name="servicos">
+            <q-icon :name="ionBusinessSharp" size="1.3rem"/>
+              <span class="text-caption text-capitalize">Serviços</span>
+          </q-tab>
+          <q-tab name="servicos">
+            <q-icon :name="ionSearchSharp" size="1.3rem"/>
+              <span class="text-caption text-capitalize">Pesquisa</span>
+          </q-tab>
+        </q-tabs>
+      </q-footer>
   </q-layout>
 </template>
 
 <script setup lang="ts">
+import { ionHome, ionBusinessSharp, ionSearchSharp} from '@quasar/extras/ionicons-v7';
 import { ref } from 'vue';
 import EssentialLink, { type EssentialLinkProps } from 'components/EssentialLink.vue';
 
@@ -94,9 +118,13 @@ const linksList: EssentialLinkProps[] = [
   }
 ];
 
+const tab = ref('home');
 const leftDrawerOpen = ref(false);
 
 function toggleLeftDrawer () {
   leftDrawerOpen.value = !leftDrawerOpen.value;
 }
+
+
+
 </script>
