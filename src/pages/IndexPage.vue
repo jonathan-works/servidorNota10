@@ -1,6 +1,6 @@
 <template>
-  <q-page class="q-gutter-y-md">
-    <div class="q-pa-md">
+  <q-page class="q-gutter-y-sm">
+    <div class="q-pt-md q-px-md q-pb-sm">
       <h1 class="text-h5 q-my-none">Olá, Servidor nota <span class="text-weight-medium">10</span>
       </h1>
     </div>

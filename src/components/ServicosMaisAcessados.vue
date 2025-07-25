@@ -17,7 +17,39 @@
 </template>
 <script setup lang="ts">
 import ServicoBotao from 'components/ServicoBotao.vue';
+import { 
+  ionCarSportSharp,
+  ionAirplaneSharp,
+  ionLayersSharp,
+  ionWarningSharp,
+  ionAlbumsSharp,
+  ionAlarmSharp,
+  ionDiamondSharp,
+  ionBrowsers,
+  ionSearch
+
+} from '@quasar/extras/ionicons-v7'
+import { route } from 'quasar/wrappers';
 const servicos = [
-    {}, {}, {}, {}, {}, {}, {},
+    {
+        nome: 'Integridade',
+        icon: ionDiamondSharp,
+        route: 'integridade'
+    },
+    {
+        nome: 'Alerta da CGE',
+        icon: ionWarningSharp,
+        route: 'alertas'
+    },
+    {
+        nome: 'Mira',
+        icon: ionSearch,
+        link: 'https://miracidadao.cge.mt.gov.br/'
+    },
+    {
+        nome: 'CEIS',
+        icon: ionBrowsers,
+        link: 'https://ceis.cge.mt.gov.br/'
+    },
 ]
 </script>

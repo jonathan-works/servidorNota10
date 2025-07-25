@@ -1,0 +1,12 @@
+{
+  "name": "servidornota10",
+  "version": "0.0.1",
+  "description": "A Quasar Project",
+  "author": "44120554856 <jonathansilva@cge.mt.gov.br>",
+  "private": true,
+  "dependencies": {
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/cli": "^7.0.0",
+    "@capacitor/core": "^7.0.0"
+  }
+}

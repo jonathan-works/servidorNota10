@@ -6,7 +6,7 @@
     </div>
     <q-card flat bordered>
         <q-card-section horizontal>
-            <q-card-section>
+            <q-card-section class="q-py-none">
                 <h3 class="text-h6">Verifique o seu nível de individamento</h3>
                 <div class="flex no-wrap justify-between">
                     <div>

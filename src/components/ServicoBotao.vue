@@ -1,15 +1,15 @@
 <template>
     <div>
         <div class="card flex justify-center items-center rounded-borders bg-secondary text-black">
-            <q-icon :name="ionDiamondSharp" size="3rem"/>
+            <q-icon :name="servico?.icon" size="3rem"/>
         </div>
         <div class="text-center text-weight-medium">
-            <p>Integraidade</p>
+            <p>{{servico?.nome}}</p>
         </div>
     </div>
 </template>
 <script setup lang="ts">
-import { ionDiamondSharp } from '@quasar/extras/ionicons-v7';
+const props = defineProps(['servico'])
 </script>
 
 <style scoped lang="scss">
